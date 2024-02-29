@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{12:function(n,e,t){},13:function(n,e,t){},14:function(n,e,t){"use strict";t.r(e);var o=t(0),r=t.n(o),a=t(2),c=t.n(a);t(12),t(13);var u=function(){return r.a.createElement("div",null,"Ivan Junoy")};c.a.createRoot(document.getElementById("root")).render(r.a.createElement(r.a.StrictMode,null,r.a.createElement(u,null)))},3:function(n,e,t){n.exports=t(14)}},[[3,1,2]]]);
+//# sourceMappingURL=main.c366ec34.chunk.js.map

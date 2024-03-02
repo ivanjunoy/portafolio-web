@@ -6,31 +6,23 @@ const Contact = () => {
         <div>
             <div>
                 <h2>Contact</h2>
-                <p>
-                    <a href="mailto: ivanjunoy@gmail.com" target="_blank" rel="noopener noreferrer">
-                        ivanjunoy@gmail.com
-                    </a>
-                </p>
+                <a href="mailto: ivanjunoy@gmail.com" target="_blank" rel="noopener noreferrer">
+                    ivanjunoy@gmail.com
+                </a>   
+            </div>
+            <div>
+                <a href="https://github.com/ivanjunoy" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>       
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/ivanjunoy/" target="_blank" rel="noopener noreferrer">
+                    Linkedin
+                </a>
             </div>
             <div>
                 <p>
-                    <a href="https://github.com/ivanjunoy" target="_blank" rel="noopener noreferrer">
-                        github.com
-                    </a>
-                </p>
-            </div>
-            <div>
-                <p>
-                    <a href="https://www.linkedin.com/in/ivanjunoy/" target="_blank" rel="noopener noreferrer">
-                        linkedin.com
-                    </a>
-                </p>
-            </div>
-            <div>
-                <p>
-                    <p>
-                        +54 9 3416 75-2684
-                    </p>
+                    +54 9 3416 75-2684
                 </p>
             </div>
         </div>

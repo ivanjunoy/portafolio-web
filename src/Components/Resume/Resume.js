@@ -14,6 +14,7 @@ const Resume = () => {
                 My passion lies in the continuous pursuit of knowledge and the application of the latest technologies with the aim of driving projects to success. Additionally, I possess strong software analysis and error-solving capabilities, as well as outstanding social skills that enable me to collaborate effectively in multidisciplinary teams.
             </p>                    
             <p>Rosario - Santa Fe - Argentina</p>
+            <hr />
         </>
     )
 }

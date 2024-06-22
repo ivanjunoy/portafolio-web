@@ -18,7 +18,6 @@ const Projects = () => {
                     </li>
                 </ul>
             </div>
-            <hr />
         </>
     )
 }

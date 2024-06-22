@@ -18,7 +18,7 @@ const Formation = () => {
                     <li>jan. 2022 - jan. 2023</li>
                 </ul>
             </div>
-            <hr />
+     
         </>
     )
 }

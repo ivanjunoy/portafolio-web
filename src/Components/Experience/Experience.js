@@ -25,7 +25,6 @@ const Experience = () => {
                     <li>mar. 2022 - sept. 2022</li>
                 </ul>
             </div>
-            <hr />
         </>
     )
 }

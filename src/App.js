@@ -13,11 +13,25 @@ function App() {
     <>
       <Header />
       <Resume />
-      <Experience />
-      <Formation />
+      <div className='containerGrid'>
+        <div>
+          <Experience  />
+        </div>
+        <div>
+          <Formation  />  
+        </div>
+      </div>
+      <hr />
       <Skills />
-      <Projects />
-      <Contact />
+      <div className='containerGrid'>
+        <div>
+          <Contact />
+        </div>
+        <div>
+          <Projects />
+        </div>
+      </div>
+      <hr />
     </>
   );
 }

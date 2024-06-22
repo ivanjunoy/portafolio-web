@@ -3,33 +3,42 @@ import React from "react";
 const Skills = () => {
     return (
         <>
-            <div>
+            <div className="containerGrid">
                 <div>
                     <h2>Hard Skills</h2>
                     <ul>
+                        <li>Proficient in code analysis and debuggings</li>
+                        <li>Strong analytical and problem-solving skills</li>
+                        <li>English B2</li>
                         <li>Web development</li>
+                        <li>Node</li>
+                        <li>Express</li>
                         <li>HTML/CSS</li>
                         <li>JavaScript</li>
+                        <li>TypeScript</li>
                         <li>React</li>
                         <li>Sass</li>
                         <li>VTEX</li>
-                        <li>TypeScript</li>
-                        <li>Bootstrap</li>
-                        <li>jQuery</li>
                         <li>Git</li>
-                        <li>Error Solving Skills</li>
-                        <li>Scrum</li>
-                        <li>English B2</li>
                     </ul>
                 </div>
-                <h2>Soft Skills</h2>
-                <ul>
-                    <li>Teamwork</li>
-                    <li>Communication skills</li>
-                    <li>Presentation</li>
-                    <li>Time Management</li>
-                    <li>Reflective Character</li>
-                </ul>
+                <div>
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li><b>Team Collaboration:</b>
+                            <ul>
+                                <li>Proven ability to work effectively within diverse team environments.</li>
+                            </ul>
+                        </li>
+                        <li><b>Effective Communication:</b>
+                            <ul>
+                                <li>Strong verbal and written communication skills, adept at conveying technical concepts to non-technical stakeholders.</li>
+                            </ul>
+                        </li>
+                        <li>Presentation Skills</li>
+                        <li>Time Management</li>
+                    </ul>
+                </div>
             </div>
             <hr />
         </>

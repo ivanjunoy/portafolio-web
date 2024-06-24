@@ -3,7 +3,7 @@ import Resume from '../Resume/Resume';
 import Experience from '../Experience/Experience';
 import Formation from '../Formation/Formation';
 import Skills from '../Skills/Skills';
-import Projects from '../Projects/Projects';
+import Projects from '../ProjectsYBlogText/ProjectsYBlog';
 import Contact from '../Contact/Contact';
 
 const MinimalResumeHome = () => {

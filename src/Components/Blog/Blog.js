@@ -1,13 +1,12 @@
-import ProjectCards from "./ProjectCards/projectCards";
+import Posts from "./Posts/Posts"
 
 const Blog = () => {
     return (
         <>
-            <h1>Projects</h1>
-            <ProjectCards />
             <h1>Blog</h1>
+            <Posts />
         </>
     )
 }
 
-export default Blog;
+export default Blog

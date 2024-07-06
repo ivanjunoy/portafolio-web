@@ -5,7 +5,7 @@ const Posts = () => {
         <>
             {
                 postsObj.map((post) => {
-                    return(
+                    return (
                         <div key={post.id}>
                             <h3>{post.title}</h3>
                             <p>{post.textPost}</p>

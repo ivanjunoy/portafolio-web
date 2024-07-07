@@ -1,13 +1,15 @@
 body {
 	width: 50%;
 	margin: auto;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 	font-size: 1rem;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	font-family: "Raleway", sans-serif;
+
 }
 
 hr {
@@ -30,15 +32,4 @@ hr {
 }
 
 
-.containerGrid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 10px;
-}
-
-@media (max-width: 768px) {
-	.containerGrid {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto auto;
-	}
-}
+/* 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */

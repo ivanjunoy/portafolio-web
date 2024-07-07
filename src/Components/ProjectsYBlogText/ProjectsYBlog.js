@@ -11,7 +11,7 @@ const ProjectsYBlog = () => {
                         <Link to='/proyectos'>Go to Projects</Link>
                     </li>
                     <li>
-                        <Link to='/blog'>Go to Blog</Link>
+                        <Link to='/blog' target="_blank" rel="noopener noreferrer">Go to Blog</Link>
                     </li>
                 </ul>
             </div>

@@ -12,11 +12,11 @@ const Posts = () => {
                     return (
                         <div className={styles.container}>
                             <div key={post.id} className={styles.containerPost}>
-                                <hr></hr>
-                                <h3>-{post.title}-</h3>
-                                <div className={styles.lols} dangerouslySetInnerHTML={{ __html: markdownText }}></div>
-                                <div className={styles.fecha}>04/24</div>
-                                <hr></hr>
+                                    <hr />
+                                    <h3>-{post.title}-</h3>
+                                    <div className={styles.lols} dangerouslySetInnerHTML={{ __html: markdownText }}></div>
+                                    <div className={styles.fecha}>04/24</div>
+                                    <hr />
                             </div>
                         </div>
                     )

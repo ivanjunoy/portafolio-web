@@ -2,7 +2,8 @@
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px; /* Espacio entre las cards */
+    gap: 5px; /* Espacio entre las cards */
+    margin-bottom: 40px;
 }
 
 .card {

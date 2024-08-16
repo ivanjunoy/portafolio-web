@@ -16,10 +16,12 @@ const Skills = () => {
                         <li>HTML/CSS</li>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
+                        <li>C</li>
                         <li>React</li>
+                        <li>Next</li>
                         <li>Sass</li>
-                        <li>VTEX</li>
                         <li>Git</li>
+                        <li>VTEX</li>
                     </ul>
                 </div>
                 <div>

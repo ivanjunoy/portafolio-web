@@ -12,14 +12,18 @@ import styles from './MinimalResume.module.css'
 const MinimalResumeHome = () => {
     return (
         <>
-            <Header />
-            <Resume />
-            <div className={styles.containerGrid}>
+            <div>
                 <div>
-                <Experience  />
+                    <Header />
+                    <Resume />
                 </div>
-                <div>
-                <Formation  />  
+                <div className={styles.containerGrid}>
+                    <div>
+                    <Experience  />
+                    </div>
+                    <div>
+                    <Formation  />  
+                    </div>
                 </div>
             </div>
             <hr />
@@ -32,7 +36,6 @@ const MinimalResumeHome = () => {
                     <Projects />
                 </div>
             </div>
-            <hr />
         </>
     )
 }

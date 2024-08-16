@@ -1,16 +1,40 @@
 body {
-	width: 50%;
-	margin: auto;
-
+	width: 60%;
+	margin: 10px auto; /* Añade un margen de 10px arriba y abajo */
 	font-size: 1rem;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-/* 	font-family: "Raleway", sans-serif; */
 	font-family: "Montserrat", sans-serif;
+	height: calc(100vh - 2vh); /* Resta 20px para que el body no se salga de la pantalla */
+	border: 1px solid #000; /* Añade un borde de 1px de grosor y color negro */
+	box-sizing: border-box; /* Asegura que el padding y el borde no afecten al width y height */
+	padding: 0px 10px; /* Añade un padding de 10px a los lados */
+	overflow: hidden; /* Evita que el contenido se desborde fuera del body */
 }
+
+.scroll-container {
+	height: 100%; /* Ocupa todo el alto del body */
+	overflow-y: scroll; /* Permite el scroll vertical sin mostrar la barra */
+	overflow-x: hidden; /* Evita el scroll horizontal */
+	scrollbar-width: none; /* Firefox: Oculta la barra de scroll */
+	-ms-overflow-style: none; /* IE 10+: Oculta la barra de scroll */
+}
+
+.scroll-container::-webkit-scrollbar {
+	display: none; /* WebKit (Chrome, Safari, etc.): Oculta la barra de scroll */
+}
+
+.content-container {
+	padding: 10px; /* Ajusta el padding según sea necesario */
+	box-sizing: border-box; /* Asegura que el padding y el borde no afecten al width y height */
+	height: auto; /* Ajusta la altura automáticamente según el contenido */
+}
+
+
+
 
 hr {
 	width: 100%;
@@ -20,6 +44,7 @@ hr {
 	body {
 		width: 90%;
 		padding: 10px;
+		height: calc(100vh - 10vh);
 	}
 
 	img {
@@ -32,4 +57,3 @@ hr {
 }
 
 
-/* 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */

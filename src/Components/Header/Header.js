@@ -15,19 +15,22 @@ const Header = () => {
 
     return (
         <>
-            <h1>
-                <Typewriter
-                    onInit={(typewriter) => {
-                        typewriter
-                        .typeString('Ivan Junoy')
-                        .start()
-                    }}
-                />
-            </h1>
+            <div>
+                <h1>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter
+                            .typeString('Ivan Junoy')
+                            .start()
+                        }}
+                    />
+                </h1>
 
-            <p className='profileButon' onClick={showProfilePicture}>{buttonVar}</p>
-            <img className='profilePicture' src={profileImg} alt="Perfil Foto" style={{ display: isImageVisible ? 'block' : 'none' }} onClick={showProfilePicture}/>
-            <hr />
+                <p className='profileButon' onClick={showProfilePicture}>{buttonVar}</p>
+                <img className='profilePicture' src={profileImg} alt="Perfil Foto" style={{ display: isImageVisible ? 'block' : 'none' }} onClick={showProfilePicture}/>
+                <hr />
+            </div>
+
         </>
     )
 }

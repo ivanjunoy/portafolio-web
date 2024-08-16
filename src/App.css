@@ -1,6 +1,5 @@
 body {
-	width: 60%;
-	margin: 10px auto; /* Añade un margen de 10px arriba y abajo */
+	margin: 30px; /* Añade un margen de 10px arriba y abajo */
 	font-size: 1rem;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -8,10 +7,9 @@ body {
 	-o-background-size: cover;
 	background-size: cover;
 	font-family: "Montserrat", sans-serif;
-	height: calc(100vh - 2vh); /* Resta 20px para que el body no se salga de la pantalla */
+	height: 94vh; /* Resta 20px para que el body no se salga de la pantalla */
 	border: 1px solid #000; /* Añade un borde de 1px de grosor y color negro */
 	box-sizing: border-box; /* Asegura que el padding y el borde no afecten al width y height */
-	padding: 0px 10px; /* Añade un padding de 10px a los lados */
 	overflow: hidden; /* Evita que el contenido se desborde fuera del body */
 }
 
@@ -42,9 +40,8 @@ hr {
 
 @media only screen and (max-width:900px) { 
 	body {
-		width: 90%;
-		padding: 10px;
-		height: calc(100vh - 10vh);
+		
+		height: 92vh;
 	}
 
 	img {

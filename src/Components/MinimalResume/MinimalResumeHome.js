@@ -36,6 +36,10 @@ const MinimalResumeHome = () => {
                     <Projects />
                 </div>
             </div>
+            <hr />
+            <div>
+                <p>graphic design is my passion</p>
+            </div>
         </>
     )
 }

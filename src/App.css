@@ -33,3 +33,13 @@ hr {
 
 
 /* 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
+body.dark-mode {
+	background-color: #1C2B41;
+	color: #CCE0FF;
+}
+
+body.dark-mode a {
+	color: #1e90ff; /* Cambia el color del link a un azul más claro */
+  }
+

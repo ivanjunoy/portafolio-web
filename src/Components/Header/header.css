@@ -12,3 +12,13 @@
 .profilePicture {
     cursor: pointer;
 }
+
+.header-cont {
+	display: flex;
+    justify-content: space-between;
+}
+
+.darkModeButton {
+    display: flex;
+    align-items: center;
+}

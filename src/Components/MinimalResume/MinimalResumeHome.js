@@ -32,7 +32,6 @@ const MinimalResumeHome = () => {
                     <Projects />
                 </div>
             </div>
-            <hr />
         </>
     )
 }

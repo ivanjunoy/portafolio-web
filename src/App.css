@@ -10,6 +10,7 @@ body {
 	background-size: cover;
 /* 	font-family: "Raleway", sans-serif; */
 	font-family: "Montserrat", sans-serif;
+	transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 hr {
@@ -41,5 +42,5 @@ body.dark-mode {
 
 body.dark-mode a {
 	color: #1e90ff; /* Cambia el color del link a un azul más claro */
-  }
+}
 

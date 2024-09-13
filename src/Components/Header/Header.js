@@ -50,7 +50,6 @@ const Header = () => {
                 {buttonVar}
             </p>
             <img className='profilePicture' src={profileImg} alt="Perfil Foto" style={{ display: isImageVisible ? 'block' : 'none' }} onClick={showProfilePicture}/>
-            <hr />
         </>
     )
 }

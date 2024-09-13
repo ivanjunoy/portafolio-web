@@ -42,7 +42,6 @@ const Skills = () => {
                     </ul>
                 </div>
             </div>
-            <hr />
         </>
     )
 }

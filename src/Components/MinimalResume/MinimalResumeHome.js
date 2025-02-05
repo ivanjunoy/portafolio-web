@@ -27,6 +27,7 @@ const MinimalResumeHome = () => {
             <div className={styles.containerGrid}>
                 <div>
                     <Contact />
+                    <p>ivanjunoy@gmail.com</p>
                 </div>
                 <div>
                     <Projects />

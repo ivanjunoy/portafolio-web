@@ -3,15 +3,15 @@ import React from 'react'
 const Resume = () => {
     return (
         <>
-            <p>Web developer | 28 years old</p>
+            <p>Software Engineer | 28 years old</p>
             <p>
-                I am Ivan, a professional in the field of front-end web development with 3 years of experience in the retail industry
+                I’m Iván, a software development professional with 4 years of experience, specializing in the creation and maintenance of e-commerce solutions.
             </p>
             <p>
-                My primary focus is on creating highly functional user experiences in the digital realm, underpinned by a strong interest in programming
+                My main focus is on developing highly functional user experiences in the digital environment, driven by a strong interest in programming and process optimization.
             </p>  
             <p>
-                My passion lies in the continuous pursuit of knowledge and the application of the latest technologies with the aim of driving projects to success. Additionally, I possess strong software analysis and error-solving capabilities, as well as outstanding social skills that enable me to collaborate effectively in multidisciplinary teams
+                Over the past years, I’ve gained valuable experience building and maintaining a full-featured e-commerce platform, including key functionalities such as checkout, promotions management, data handling, API integration, AWS deployment, and dashboard development for metrics analysis. Additionally, I possess strong skills in software analysis, error resolution, and an outstanding ability to collaborate effectively within multidisciplinary teams.
             </p>                    
             <p>Rosario - Santa Fe - Argentina</p>
             <hr />

@@ -13,6 +13,7 @@ const Skills = () => {
                         <li>Web development</li>
                         <li>Node</li>
                         <li>Express</li>
+                        <li>Nest</li>
                         <li>HTML/CSS</li>
                         <li>JavaScript</li>
                         <li>TypeScript</li>
@@ -22,6 +23,7 @@ const Skills = () => {
                         <li>Sass</li>
                         <li>Git</li>
                         <li>VTEX</li>
+                        <li>AWS</li>
                     </ul>
                 </div>
                 <div>

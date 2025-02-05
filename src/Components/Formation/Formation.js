@@ -11,14 +11,6 @@ const Formation = () => {
                     <li>jan. 2021 - present</li>
                 </ul>
             </div>
-            <div>
-                <h4>Full-Stack Developer</h4>
-                <ul>
-                    <li>soyhenry.com</li>
-                    <li>jan. 2022 - jan. 2023</li>
-                </ul>
-            </div>
-     
         </>
     )
 }

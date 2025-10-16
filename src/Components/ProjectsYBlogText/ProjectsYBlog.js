@@ -13,6 +13,9 @@ const ProjectsYBlog = () => {
                     <li>
                         <Link to='/blog' target="_blank" rel="noopener noreferrer">Go to Blog</Link>
                     </li>
+                    <li>
+                        <Link to='/learning' rel="noopener noreferrer">Learning</Link>
+                    </li>
                 </ul>
             </div>
         </>

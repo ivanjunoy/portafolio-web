@@ -13,20 +13,17 @@ import Closures from './Components/Learning/content/closures/Closures';
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' Component={MinimalResumeHome} />
-          <Route path='/proyectos' Component={Project} />
-          <Route path='/blog' Component={Blog} />
-          <Route path='/dashboard' Component={Dashboard} />
-          <Route path="/learning" Component={Learning}>
-            <Route path="closures" Component={Closures} />
-   {/*          <Route path="promises" Component={Promises} /> */}
-          </Route>
-
-          <Route path='*' Component={NotFound} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' Component={MinimalResumeHome}/>
+        <Route path='/proyectos' Component={Project}/>
+        <Route path='/blog' Component={Blog}/>
+        <Route path='/dashboard' Component={Dashboard}/>
+        <Route path='/learning' Component={Learning}/>
+        <Route path='/learning/closures' Component={Closures}/>
+        <Route path='*' Component={NotFound}/>
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }

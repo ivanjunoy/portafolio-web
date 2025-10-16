@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Lerning.module.css';
 
 const Learning = () => {
@@ -12,10 +12,9 @@ const Learning = () => {
             <div className={styles.learningListContainer}>
                 <ul>
                     <li>
-                        <a href="/learning/closures" rel="noopener noreferrer">Closures</a>
+                        <Link to="/learning/closures" rel="noopener noreferrer">Closures</Link>
                     </li>
                 </ul>
-                <Outlet />
             </div>
 
         </div>

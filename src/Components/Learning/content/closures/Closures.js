@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Prism from 'prismjs';
 import { Link } from 'react-router-dom';
-
-// 1) Tema
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/components/prism-javascript';
 
 const codeExample1 = `function init() {
-  var name = "Mozilla"; // name es una variable local creada por init
+  var name = "Mozilla"; 
   function displayName() {
-    // displayName() es la función interna que forma el closure
-    console.log(name); // usar la variable declarada en la función padre
+    // displayName() 
+    console.log(name); 
   }
   displayName();
 }
@@ -28,47 +26,51 @@ const add10 = makeAdder(10);
 console.log(add5(2)); // 7
 console.log(add10(2)); // 12`
 
-const Closures = () => {
-  const [result, setResult] = useState();
+const codeExample3 = `function makeSizer(size) {
+  return function () {
+    document.body.style.fontSize = \`\${size}px\`;
+  };
+}
 
+const size12 = makeSizer(12);
+const size14 = makeSizer(14);
+const size16 = makeSizer(16);
+`
+
+const Closures = () => {
+  
   useEffect(() => {
     Prism.highlightAll();
   }, []);
 
-  function makeFunc() {
-    const name = "Mozilla";
-    function displayName() {
-      console.log(name);
-      return name;
-    }
-    return displayName;
-  }
-
-  function handleClick() {
-    const res = makeFunc(); // ejecuta el closure
-    setResult(res);       // guarda el resultado en el estado
-  }
-
   return (
     <div>
       <Link to="/learning">Go back</Link>
-      <h2>Closures</h2>
+      <h1>Closures</h1>
 
       <p>Un closure (o clausura) es cuando una función “recuerda” las variables del lugar donde fue creada, incluso después de que esa función externa ya terminó de ejecutarse.</p>
 
       <pre><code className="language-js">{codeExample1}</code></pre>
-      <div style={{ display: 'flex', gap: '10px' }}>
-        <button onClick={handleClick}>Test</button>
-        {result && (
-          <p style={{ margin: 0 }}>
-            {result}
-          </p>
-        )}
-      </div>
+      Output: Mozilla
 
       <p>Aquí hay un ejemplo un poco más interesante: una función makeAdder:</p>
       <pre><code className="language-js">{codeExample2}</code></pre>
+      <p>
+        makeAdder crea funciones que recuerdan el valor que se les pasó.
+        Cada una guarda su propio entorno: add5 recuerda que x = 5 y add10 que x = 10.
+        Por eso son closures: funciones que mantienen acceso a variables externas incluso después de que la función original terminó.
+      </p>
 
+      <h3>Closures Prácticos</h3>
+      
+      <p>Otro ejemplo práctico: crear funciones para cambiar el tamaño de fuente:</p>
+      <pre><code className="language-js">{codeExample3}</code></pre>
+      
+      <p>
+        Este ejemplo muestra cómo los closures pueden ser útiles para crear funciones 
+        que "recuerdan" un valor específico. Cada función size12, size14, size16 
+        recuerda su propio valor de size.
+      </p>
     </div>
   );
 };

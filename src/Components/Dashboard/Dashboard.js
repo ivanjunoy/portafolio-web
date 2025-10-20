@@ -6,7 +6,6 @@ const Dashboard = () => {
         <div className="dashboard">
             <header className="dashboard-header">
                 <h1>Dashboard</h1>
-                <p>Panel de administración del portafolio</p>
             </header>
 
             <main className="dashboard-content">

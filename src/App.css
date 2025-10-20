@@ -19,8 +19,8 @@ hr {
 
 @media only screen and (max-width:900px) { 
 	body {
-		width: 90%;
-		padding: 10px;
+		width: auto;
+		padding: 0 10px;
 	}
 
 	img {

@@ -1,3 +1,56 @@
+.games-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .slider {
     width: 100%;
+    margin: 20px 0;
+}
+
+.slider-info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.slider-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    min-height: 200px;
+}
+
+.grid-item {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 50px;
+}
+
+.grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slidecontainer {
+    margin: 20px 0;
 }

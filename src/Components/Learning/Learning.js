@@ -14,6 +14,9 @@ const Learning = () => {
                     <li>
                         <Link to="/learning/closures" rel="noopener noreferrer">Closures</Link>
                     </li>
+                    <li>
+                        <Link to="/learning/closures" rel="noopener noreferrer">Event Loop</Link>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import styles from './Lerning.module.css';
 
 const Learning = () => {
+
+    function ploxCounter(n) {
+        console.log('n: ', n);
+
+        if(n <= 9) return ploxCounter(n + 1);
+
+        return n;
+    }
+
+    const numberShow = ploxCounter(0);
+    console.log('numberShow: ', numberShow);
+    
     return (
         <div className={styles.learningContainer}>
             <div>
@@ -16,7 +28,9 @@ const Learning = () => {
                     </li>
                 </ul>
             </div>
-
+            <div>
+                {numberShow}
+            </div>
         </div>
     );
 };

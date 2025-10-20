@@ -38,7 +38,7 @@ const size16 = makeSizer(16);
 `
 
 const Closures = () => {
-  
+
   useEffect(() => {
     Prism.highlightAll();
   }, []);
@@ -49,10 +49,14 @@ const Closures = () => {
       <h1>Closures</h1>
 
       <p>Un closure (o clausura) es cuando una función “recuerda” las variables del lugar donde fue creada, incluso después de que esa función externa ya terminó de ejecutarse.</p>
+      <p>Sirven para crear funciones con “memoria” o con datos privados.</p>
 
       <pre><code className="language-js">{codeExample1}</code></pre>
-      Output: Mozilla
-
+      
+      <p>
+        Una variable local normal deja de existir cuando la función termina.
+        En cambio, si una función interna la usa, esa variable queda “viva” dentro del closure, incluso después de que la función externa haya finalizado.
+      </p>
       <p>Aquí hay un ejemplo un poco más interesante: una función makeAdder:</p>
       <pre><code className="language-js">{codeExample2}</code></pre>
       <p>
@@ -62,15 +66,16 @@ const Closures = () => {
       </p>
 
       <h3>Closures Prácticos</h3>
-      
+
       <p>Otro ejemplo práctico: crear funciones para cambiar el tamaño de fuente:</p>
       <pre><code className="language-js">{codeExample3}</code></pre>
-      
+
       <p>
-        Este ejemplo muestra cómo los closures pueden ser útiles para crear funciones 
-        que "recuerdan" un valor específico. Cada función size12, size14, size16 
+        Este ejemplo muestra cómo los closures pueden ser útiles para crear funciones
+        que "recuerdan" un valor específico. Cada función size12, size14, size16
         recuerda su propio valor de size.
       </p>
+
     </div>
   );
 };

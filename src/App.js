@@ -6,6 +6,7 @@ import Blog from './Components/Blog/Blog';
 import Dashboard from './Components/Dashboard/Dashboard';
 import NotFound from './Components/NotFound/NotFound';
 import Learning from './Components/Learning/Learning';
+import Games from './Components/Games/Games';
 
 import './App.css';
 import Closures from './Components/Learning/content/closures/Closures';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/dashboard' Component={Dashboard}/>
         <Route path='/learning' Component={Learning}/>
         <Route path='/learning/closures' Component={Closures}/>
+        <Route path='/games' Component={Games}/>
         <Route path='*' Component={NotFound}/>
       </Routes>
     </BrowserRouter>

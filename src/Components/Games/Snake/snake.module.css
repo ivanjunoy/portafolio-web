@@ -1,0 +1,19 @@
+.arrContainer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.arrayItem {
+    min-width: 40px;
+    width: auto;
+    height: 30px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid #2E7D32;
+}

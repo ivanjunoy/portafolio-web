@@ -1,6 +1,7 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import MinimalResumeHome from './Components/MinimalResume/MinimalResumeHome';
+import Welcome from './Components/Welcome/Welcome';
 import Project from './Components/Project/Project';
 import Blog from './Components/Blog/Blog';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -19,7 +20,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<MinimalResumeHome />} />
+          <Route path='/' element={<Navigate to='/welcome' replace />} />
+          <Route path='/welcome' element={<Welcome />} />
+          <Route path='/resume' element={<MinimalResumeHome />} />
           <Route path='/proyectos' element={
             <>
               <NavigationHeader />

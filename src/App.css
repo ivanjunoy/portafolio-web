@@ -13,6 +13,12 @@ body {
 	transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+body.welcome-body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 hr {
 	width: 100%;
 }
@@ -43,4 +49,3 @@ body.dark-mode {
 body.dark-mode a {
 	color: #1e90ff; /* Cambia el color del link a un azul más claro */
 }
-

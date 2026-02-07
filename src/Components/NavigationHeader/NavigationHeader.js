@@ -26,7 +26,7 @@ const NavigationHeader = () => {
         <nav className="navigation-header">
             <div className="nav-container">
                 <div className="nav-logo">
-                    <Link to="/" onClick={closeMenu}>Ivan Junoy</Link>
+                    <Link to="/welcome" onClick={closeMenu}>Ivan Junoy</Link>
                 </div>
                 
                 {/* Hamburger button */}

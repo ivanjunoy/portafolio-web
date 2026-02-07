@@ -5,42 +5,30 @@ const Skills = () => {
         <>
             <div className="containerGrid">
                 <div>
-                    <h2>Hard Skills</h2>
+                    <h2>Habilidades técnicas</h2>
                     <ul>
-                        <li>Proficient in code analysis and debuggings</li>
-                        <li>Strong analytical and problem-solving skills</li>
-                        <li>English B2</li>
-                        <li>Web development</li>
-                        <li>Node</li>
-                        <li>Express</li>
-                        <li>Nest</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>TypeScript</li>
-                        <li>C</li>
-                        <li>React</li>
-                        <li>Next</li>
-                        <li>Sass</li>
-                        <li>Git</li>
-                        <li>VTEX</li>
-                        <li>AWS</li>
+                        <li>React (4 años, avanzado)</li>
+                        <li>JavaScript (4 años, avanzado)</li>
+                        <li>TypeScript (3 años, avanzado)</li>
+                        <li>HTML/CSS (4 años, avanzado)</li>
+                        <li>Node.js (3 años, intermedio)</li>
+                        <li>Express (2 años, intermedio)</li>
+                        <li>NestJS (1 año, intermedio)</li>
+                        <li>Next.js (1 año, intermedio)</li>
+                        <li>Sass (2 años, intermedio)</li>
+                        <li>Git (4 años, avanzado)</li>
+                        <li>VTEX (3 años, avanzado)</li>
+                        <li>AWS (2 años, intermedio)</li>
+                        <li>Inglés B2</li>
                     </ul>
                 </div>
                 <div>
-                    <h2>Soft Skills</h2>
+                    <h2>Habilidades blandas</h2>
                     <ul>
-                        <li><b>Team Collaboration:</b>
-                            <ul>
-                                <li>Proven ability to work effectively within diverse team environments.</li>
-                            </ul>
-                        </li>
-                        <li><b>Effective Communication:</b>
-                            <ul>
-                                <li>Strong verbal and written communication skills, adept at conveying technical concepts to non-technical stakeholders.</li>
-                            </ul>
-                        </li>
-                        <li>Presentation Skills</li>
-                        <li>Time Management</li>
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación clara con perfiles técnicos y no técnicos</li>
+                        <li>Gestión del tiempo y prioridades</li>
+                        <li>Presentación de avances y resultados</li>
                     </ul>
                 </div>
             </div>

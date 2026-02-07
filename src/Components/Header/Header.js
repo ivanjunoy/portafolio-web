@@ -10,7 +10,7 @@ import { CiLight } from "react-icons/ci";
 
 const Header = () => {
     const [isImageVisible, setIsImageVisible] = useState(false);
-    const buttonVar = isImageVisible ? "Close profile photo" : "Profile Photo";
+    const buttonVar = isImageVisible ? "Cerrar foto de perfil" : "Foto de perfil";
     const [darkMode, setDarkMode] = useState(true);
 
     const showProfilePicture = () => {
@@ -46,9 +46,9 @@ const Header = () => {
                 </div>
             </div>
 
-            <p className='profileButon' onClick={showProfilePicture}>
+            <button type="button" className='profileButon' onClick={showProfilePicture}>
                 {buttonVar}
-            </p>
+            </button>
             <img className='profilePicture' src={profileImg} alt="Perfil Foto" style={{ display: isImageVisible ? 'block' : 'none' }} onClick={showProfilePicture}/>
             <hr />
         </>

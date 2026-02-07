@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 const Games = () => {
     return (
         <div className="games-container">
-            <h1>Games</h1>
+            <h1>Juegos</h1>
             <ul>
                 <li>
-                    <Link to="/games/slider-grid" rel="noopener noreferrer">Slider Grid</Link>
+                    <Link to="/games/slider-grid" rel="noopener noreferrer">Cuadrícula deslizante</Link>
                 </li>
                 <li>
-                    <Link to="/games/snake" rel="noopener noreferrer">Snake</Link>
+                    <Link to="/games/snake" rel="noopener noreferrer">Serpiente (Snake)</Link>
                 </li>
             </ul>
         </div>

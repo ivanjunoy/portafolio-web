@@ -1,7 +1,7 @@
 .container {
     display: grid;
     place-items: center;
-    height: 100vh;
+    padding: 48px 16px;
     font-family: "Raleway", sans-serif;
 
 }
@@ -10,8 +10,9 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    height: 100vh; 
     flex-direction: column;
+    max-width: 860px;
+    width: 100%;
 
 }
 

@@ -4,10 +4,10 @@ import ProjectCards from "./ProjectCards/projectCards";
 const Project = () => {
     return (
         <>
-            <h1>Projects</h1>
+            <h1>Proyectos</h1>
             <ProjectCards />
             <hr />
-            <Link to='/'>Go Back</Link>
+            <Link to='/'>Volver</Link>
         </>
     )
 }

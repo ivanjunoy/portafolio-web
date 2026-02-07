@@ -3,12 +3,12 @@ import React from "react";
 const Formation = () => {
     return (
         <>
-            <h2>Education and formation</h2>
+            <h2>Formación</h2>
             <div>
-                <h4>Systems Analyst</h4>
+                <h4>Analista de Sistemas</h4>
                 <ul>
-                    <li>General San Martin Higher Polytechnic Institute</li>
-                    <li>jan. 2021 - present</li>
+                    <li>Instituto Politécnico Superior "General San Martín"</li>
+                    <li>ene. 2021 - actualidad (en curso)</li>
                 </ul>
             </div>
         </>

@@ -7,37 +7,37 @@ import './projectCards.css'
 const ProjectCards = () => {
     return (
         <>
-            <div class="card-container">
+            <div className="card-container">
                 {/* Colors */}
                 <div className="card">
-                <Link to="https://ivanjunoy.github.io/colors/" target="_blank" rel="noopener noreferrer">
+                <a href="https://ivanjunoy.github.io/colors/" target="_blank" rel="noopener noreferrer">
                     <img className="projectCard" src={ColorImage} alt="Avatar"/>
-                </Link>
-                    <div class="container">
+                </a>
+                    <div className="container">
                         <h4><b>Colors</b></h4>
-                        <p>This old site is one of the first projects I did on my own when I was a kid.</p>
+                        <p>Este sitio fue de los primeros proyectos que hice por mi cuenta.</p>
                     </div>
                 </div>
 
                 {/* Expanding Cards */}
                 <div className="card">
-                <Link to="https://ivanjunoy.github.io/expanding-cards/" target="_blank" rel="noopener noreferrer">
+                <a href="https://ivanjunoy.github.io/expanding-cards/" target="_blank" rel="noopener noreferrer">
                     <img className="projectCard" src={CardsImage} alt="Avatar"/>
-                </Link>
-                    <div class="container">
+                </a>
+                    <div className="container">
                         <h4><b>expanding-cards</b></h4>
-                        <p>A small React component I built from a reference. Can't remember which one.</p>
+                        <p>Un pequeño componente en React construido a partir de una referencia.</p>
                     </div>
                 </div>
 
                 {/* Private Not Finished */}
                 <div className="card">
-                <Link to="/" target="_blank" rel="noopener noreferrer">
+                <Link to="/">
                     <img className="projectCard" src={PrivateImage} alt="Avatar"/>
                 </Link>
-                    <div class="container">
+                    <div className="container">
                         <h4><b>Red Privada</b></h4>
-                        <p>A private social network I wanted to use with my friends, but I never finished. Some day...</p>
+                        <p>Una red privada para amigos que quedó en pausa. Algún día...</p>
                     </div>
                 </div>
             </div>

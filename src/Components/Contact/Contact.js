@@ -4,11 +4,20 @@ import { FaGithub } from "react-icons/fa";
 import styles from "./Contact.module.css"
 
 
-const Contact = () => {
+const Contact = ({ lang = 'es' }) => {
+    const copy = {
+        es: {
+            title: 'Contacto',
+        },
+        en: {
+            title: 'Contact',
+        },
+    };
+
     return (
         <>
             <div>
-                <h2>Contact</h2>
+                <h2>{copy[lang].title}</h2>
                 <div className={styles.contactContainer}>
                     <div>
                         <a href="mailto: ivanjunoy@gmail.com" target="_blank" rel="noopener noreferrer">

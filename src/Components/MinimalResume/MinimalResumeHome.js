@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Header from '../Header/Header'
 import Resume from '../Resume/Resume';
 import Experience from '../Experience/Experience';
@@ -10,27 +11,33 @@ import Contact from '../Contact/Contact';
 import styles from './MinimalResume.module.css'
 
 const MinimalResumeHome = () => {
+    const [lang, setLang] = useState('es');
+
+    const toggleLang = () => {
+        setLang((prev) => (prev === 'es' ? 'en' : 'es'));
+    };
+
     return (
         <>
-            <Header />
-            <Resume />
+            <Header lang={lang} onToggleLang={toggleLang} />
+            <Resume lang={lang} />
             <div className={styles.containerGrid}>
                 <div>
-                <Experience  />
+                <Experience lang={lang} />
                 </div>
                 <div>
-                <Formation  />  
+                <Formation lang={lang} />  
                 </div>
             </div>
             <hr />
-            <Skills />
+            <Skills lang={lang} />
             <div className={styles.containerGrid}>
                 <div>
-                    <Contact />
+                    <Contact lang={lang} />
                     <p>ivanjunoy@gmail.com</p>
                 </div>
                 <div>
-                    <Projects />
+                    <Projects lang={lang} />
                 </div>
             </div>
         </>

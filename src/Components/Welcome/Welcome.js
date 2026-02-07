@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import styles from './Welcome.module.css';
 
 const Welcome = () => {
@@ -16,12 +15,15 @@ const Welcome = () => {
         <p className={styles.eyebrow}>Portfolio</p>
         <h1 className={styles.title}>Iván Junoy</h1>
         <p className={styles.subtitle}>
-          Desarrollador de software enfocado en construir interfaces claras y confiables.
+          Desarrollador de software enfocado en construir soluciones claras y confiables.
+        </p>
+        <p className={styles.status}>
+          Actualmente trabajo tiempo completo como ingeniero de software.
         </p>
 
         <div className={styles.actions}>
-          <Link className={styles.primary} to="/proyectos">Ver proyectos</Link>
-          <Link className={styles.secondary} to="/resume">Ver CV</Link>
+          <a className={styles.primary} href="https://wa.me/3416752684" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+          <a className={styles.secondary} href="mailto:ivanjunoy@gmail.com">Mail</a>
         </div>
 
         <div className={styles.meta}>

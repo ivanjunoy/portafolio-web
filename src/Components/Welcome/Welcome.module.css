@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .frame {
@@ -20,6 +21,32 @@
   font-size: 0.7rem;
   margin: 0;
   color: rgba(17, 24, 39, 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.thinking {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 0.85em;
+  height: 0.85em;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  border-top-color: transparent;
+  display: inline-block;
+  animation: spin 0.4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .title {

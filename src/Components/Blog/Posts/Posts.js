@@ -3,6 +3,8 @@ import { postsObj } from "./postObj"
 
 import styles from './Post.module.css';
 
+const blockedProtocols = ['javascript'];
+
 const sanitizeHtml = (html) => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
@@ -12,8 +14,10 @@ const sanitizeHtml = (html) => {
     doc.querySelectorAll("*").forEach((el) => {
         [...el.attributes].forEach((attr) => {
             const name = attr.name.toLowerCase();
-            const value = attr.value;
-            if (name.startsWith("on") || name === "style" || (name === "href" && value.toLowerCase().startsWith("javascript:"))) {
+            const value = attr.value.toLowerCase().trim();
+            const hasBlockedHref = name === "href" && blockedProtocols.some((protocol) => value.startsWith(`${protocol}:`));
+
+            if (name.startsWith("on") || name === "style" || hasBlockedHref) {
                 el.removeAttribute(attr.name);
             }
         });
@@ -29,8 +33,8 @@ const Posts = () => {
                 postsObj.map((post) => {
                     const markdownText = sanitizeHtml(marked(post.textPost));
                     return (
-                        <div className={styles.container}>
-                            <div key={post.id} className={styles.containerPost}>
+                        <div key={post.id} className={styles.container}>
+                            <div className={styles.containerPost}>
                                     <hr />
                                     <h3>-{post.title}-</h3>
                                     <div className={styles.lols} dangerouslySetInnerHTML={{ __html: markdownText }}></div>

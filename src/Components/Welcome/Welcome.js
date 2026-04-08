@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import styles from './Welcome.module.css';
 
-const thinkingPhrasesEs = [
+const thinkingPhrases = [
   'Pensando...',
   'Analizando datos...',
+  'Leyendo archivo...',
   'Procesando solicitud...',
   'Ejecutando comando...',
   'Consultando base de datos...',
@@ -24,7 +25,7 @@ const thinkingPhrasesEs = [
   'Finalizando operación...',
 ];
 
-const thinkingPhrasesEn = [
+/* const thinkingPhrasesEn = [
   'Thinking...',
   'Analyzing data...',
   'Reading file...',
@@ -46,9 +47,7 @@ const thinkingPhrasesEn = [
   'Verifying integrity...',
   'Preparing environment...',
   'Finalizing operation...',
-];
-
-const thinkingPhrases = thinkingPhrasesEn.map((phrase) => phrase);
+]; */
 
 const Welcome = () => {
   const [thinkingIndex, setThinkingIndex] = useState(0);
@@ -64,7 +63,7 @@ const Welcome = () => {
     let timeoutId;
 
     const run = () => {
-      const randomDelay = Math.random() * (1400 - 200); // entre 400ms y 1400ms
+      const randomDelay = Math.random() * (1400 - 200); // entre 400ms y 1400msclear
 
       timeoutId = setTimeout(() => {
         setThinkingIndex((prevIndex) =>
@@ -77,7 +76,7 @@ const Welcome = () => {
     run();
 
     return () => clearTimeout(timeoutId);
-  }, [thinkingPhrases.length]);
+  }, []);
 
 
   return (

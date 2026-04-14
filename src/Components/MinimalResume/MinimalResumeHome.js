@@ -3,7 +3,6 @@ import Resume from '../Resume/Resume';
 import Experience from '../Experience/Experience';
 import Formation from '../Formation/Formation';
 import Skills from '../Skills/Skills';
-import Projects from '../ProjectsYBlogText/ProjectsYBlog';
 import Contact from '../Contact/Contact';
 
 // CSS
@@ -68,7 +67,6 @@ const MinimalResumeHome = () => {
 
                         <section className={`${styles.section} ${styles.contact}`}>
                             <Contact lang={lang} />
-                            <p>ivanjunoy@gmail.com</p>
                         </section>
 {/* 
                         <section className={`${styles.section} ${styles.projects}`}>

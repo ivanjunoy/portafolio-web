@@ -235,17 +235,15 @@
 	line-height: 1.15;
 }
 
-.contact :global(.contactContainer) {
-	display: flex;
-	width: auto;
-	justify-content: flex-start;
-	gap: 10px;
-	margin-bottom: 4px;
-	font-size: 0.72rem;
+.contact :global(a),
+.contact :global(span) {
+	color: #202427;
+	font-size: 9.6px;
+	line-height: 1.2;
 }
 
-.contact :global(p) {
-	color: #202427;
+.contact :global(a) {
+	color: #0f766e;
 	font-weight: 700;
 }
 
@@ -372,5 +370,10 @@
 	.skills :global(li) {
 		padding: 2px 5px;
 		font-size: 8.8px;
+	}
+
+	.contact :global(a),
+	.contact :global(span) {
+		font-size: 8.7px;
 	}
 }

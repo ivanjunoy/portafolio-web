@@ -9,7 +9,7 @@ const Skills = ({ lang = 'es' }) => {
                 'React',
                 'JavaScript',
                 'TypeScript',
-                'HTML/CSS (',
+                'HTML/CSS',
                 'Node.js',
                 'Express',
                 'NestJS',

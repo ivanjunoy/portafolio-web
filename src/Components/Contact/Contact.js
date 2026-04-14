@@ -64,12 +64,11 @@ const Contact = ({ lang = 'es' }) => {
             <div className={styles.contactContainer}>
                 {contactItems.map(({ label, value, href }) => {
                     const isExternalLink = href?.startsWith('http');
-                    const isPhonePlaceholder = href === 'tel:+543416752684';
 
                     return (
                         <div className={styles.contactItem} key={label}>
                             <span className={styles.contactLabel}>{label}</span>
-                            {href && !isPhonePlaceholder ? (
+                            {href ? (
                                 <a
                                     href={href}
                                     target={isExternalLink ? '_blank' : undefined}

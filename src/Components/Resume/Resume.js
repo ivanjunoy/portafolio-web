@@ -3,18 +3,16 @@ import React from 'react'
 const Resume = ({ lang = 'es' }) => {
     const copy = {
         es: {
-            title: 'Ingeniero de Software | Frontend y e-commerce',
-            p1: 'Soy Iván, desarrollador de software con 4 años de experiencia en e-commerce, enfocado en construir interfaces claras y confiables.',
-            p2: 'Trabajo en funcionalidades clave como checkout, promociones, integraciones con APIs y tableros de métricas, cuidando performance y estabilidad.',
-            p3: 'Me destaco por el análisis técnico, la resolución de incidentes y el trabajo colaborativo con equipos multidisciplinarios.',
-            location: 'Rosario, Santa Fe, Argentina',
+            title: 'Desarrollador de Software | E-commerce, integraciones e IA aplicada',
+            p1: 'Desarrollador de software con 4 años de experiencia construyendo y manteniendo productos web para e-commerce.',
+            p2: 'Trabajo sobre flujos críticos como checkout, promociones, catálogo, APIs e integraciones, con foco en performance, estabilidad y entrega de valor de producto.',
+            p3: 'Experiencia aplicando herramientas de IA para acelerar análisis técnico, implementación, documentación y resolución de problemas.',
         },
         en: {
-            title: 'Software Engineer | Frontend and e-commerce',
-            p1: 'I am Iván, a software developer with 4 years of experience in e-commerce, focused on building clear and reliable interfaces.',
-            p2: 'I work on key features such as checkout, promotions, API integrations, and metrics dashboards, prioritizing performance and stability.',
-            p3: 'I stand out for technical analysis, incident resolution, and collaborative work with multidisciplinary teams.',
-            location: 'Rosario, Santa Fe, Argentina',
+            title: 'Software Developer | E-commerce, integrations and applied AI',
+            p1: 'Software developer with 4 years of experience building and maintaining web products for e-commerce.',
+            p2: 'Focused on critical flows such as checkout, promotions, catalog, APIs, and integrations, with emphasis on performance, stability, and product delivery.',
+            p3: 'Experienced in applying AI tools to accelerate technical analysis, implementation, documentation, and problem-solving.',
         },
     };
 
@@ -30,7 +28,6 @@ const Resume = ({ lang = 'es' }) => {
             <p>
                 {copy[lang].p3}
             </p>
-            <p>{copy[lang].location}</p>
             <hr />
         </>
     )

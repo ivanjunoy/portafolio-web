@@ -210,10 +210,15 @@
 	padding-left: 14px;
 }
 
-.skills :global(.containerGrid) {
+.skills :global(.skillsGrid) {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 9px;
+}
+
+.skills :global(.skillCategory) {
+	display: grid;
+	gap: 4px;
 }
 
 .skills :global(ul) {

@@ -4,15 +4,15 @@ const Formation = ({ lang = 'es' }) => {
     const copy = {
         es: {
             title: 'Formación',
-            degree: 'Analista de Sistemas',
-            institution: 'Instituto Politécnico Superior "General San Martín"',
-            date: 'ene. 2021 - actualidad (en curso)',
+            degree: 'Analista Programador',
+            institution: 'UAI',
+            date: 'ene. 2025 - actualidad (en curso)',
         },
         en: {
             title: 'Education',
             degree: 'Systems Analyst',
-            institution: 'Instituto Politécnico Superior "General San Martín"',
-            date: 'Jan 2021 - Present (in progress)',
+            institution: 'UAI',
+            date: 'Jan 2025 - Present (in progress)',
         },
     };
 

@@ -34,7 +34,7 @@ const Contact = ({ lang = 'es' }) => {
         },
         {
             label: copy[lang].phone,
-            value: '+54 341 6752-684',
+            value: '+54 341 675-2684',
             href: 'tel:+543416752684',
         },
         {

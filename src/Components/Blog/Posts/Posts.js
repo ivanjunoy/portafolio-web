@@ -33,15 +33,13 @@ const Posts = () => {
                 postsObj.map((post) => {
                     const markdownText = sanitizeHtml(marked(post.textPost));
                     return (
-                        <div key={post.id} className={styles.container}>
+                        <article key={post.id} className={styles.container}>
                             <div className={styles.containerPost}>
-                                    <hr />
-                                    <h3>-{post.title}-</h3>
+                                    <div className={styles.postMeta}><span>REFLEXIONES / {String(post.id).padStart(2, '0')}</span><time dateTime="2024-04">ABRIL, 2024</time></div>
+                                    <h2>{post.title}</h2>
                                     <div className={styles.lols} dangerouslySetInnerHTML={{ __html: markdownText }}></div>
-                                    <div className={styles.fecha}>04/24</div>
-                                    <hr />
                             </div>
-                        </div>
+                        </article>
                     )
                 })
             }

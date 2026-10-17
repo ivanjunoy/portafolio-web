@@ -37,6 +37,8 @@
 
 /* Hamburger button styles */
 .hamburger {
+    border: 0;
+    background: transparent;
     display: none;
     flex-direction: column;
     cursor: pointer;

@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FiArrowRight, FiArrowUpRight, FiCode, FiBookOpen, FiFileText, FiMapPin } from 'react-icons/fi';
 import styles from './Welcome.module.css';
 
 const thinkingPhrases = [
@@ -53,23 +55,16 @@ const Welcome = () => {
   const [thinkingIndex, setThinkingIndex] = useState(0);
 
   useEffect(() => {
-    document.body.classList.add('welcome-body');
-    return () => {
-      document.body.classList.remove('welcome-body');
-    };
-  }, []);
-
-  useEffect(() => {
     let timeoutId;
 
     const run = () => {
-      const randomDelay = Math.random() * (1400 - 200); // entre 400ms y 1400msclear
+      const randomDelay = 2400 + Math.random() * 1600;
 
       timeoutId = setTimeout(() => {
         setThinkingIndex((prevIndex) =>
           (prevIndex + 1) % thinkingPhrases.length
         );
-        run(); // vuelve a programarse con nuevo delay
+        run();
       }, randomDelay);
     };
 
@@ -82,33 +77,39 @@ const Welcome = () => {
   return (
     <main className={styles.page}>
       <section className={styles.frame}>
-        <h1 className={styles.title}>Iván Junoy</h1>
+        <div className={styles.introduction}>
+        <p className="portfolio-eyebrow"><span>00 /</span> CÓDIGO, CURIOSIDAD</p>
+        <h1 className={styles.title}>Hola, soy<br />Iván <em>Junoy.</em></h1>
         <p className={styles.subtitle}>
           Desarrollador de software enfocado en construir soluciones claras y confiables.
         </p>
-        <p className={styles.status}>
-          Actualmente trabajo tiempo completo como ingeniero de software.
-        </p>
-
         <div className={styles.actions}>
-          <a className={styles.primary} href="https://wa.me/3416752684" target="_blank" rel="noopener noreferrer">Whatsapp</a>
-          <a className={styles.secondary} href="mailto:ivanjunoy@gmail.com">Mail</a>
+          <Link className="portfolio-button" to="/proyectos">Explorar proyectos <FiArrowRight /></Link>
+          {/* <Link className="portfolio-button portfolio-button-secondary" to="/resume">Ver mi CV <FiArrowUpRight /></Link> */}
         </div>
-
-        <div className={styles.meta}>
-          <span>Rosario, Santa Fe, Argentina</span>
-          <span>React · Node</span>
-          <span>Next · Nest</span>
-          <span>No disponible</span>
+        <div className={styles.contact}>
+          <span>¿Charlamos?</span>
+          <a href="https://wa.me/3416752684" target="_blank" rel="noopener noreferrer">WhatsApp <FiArrowUpRight /></a>
+          <a href="mailto:ivanjunoy@gmail.com">Mail <FiArrowUpRight /></a>
         </div>
-
-        <p className={styles.eyebrow}>
-          <span className={styles.thinking}>
-            {'>'} {thinkingPhrases[thinkingIndex]}
-            <span className={styles.spinner} aria-hidden="true" />
-          </span>
-        </p>
+        <div className={styles.location}><FiMapPin /> Rosario, Santa Fe, Argentina</div>
+        </div>
+        <aside className={styles.workbench} aria-label="Explorá el portafolio">
+          <div className={styles.workbenchTop}><span>PORTAFOLIO / PERSONAL</span><span className={styles.smallDot} /></div>
+          <h2>Un lugar para<br /><em>probar ideas.</em></h2>
+          <p>Lo que construyo, lo que aprendo<br />y lo que me queda por descubrir.</p>
+          <div className={styles.exploreLinks}>
+            <Link to="/proyectos"><span className={styles.linkIcon}><FiCode /></span><span><strong>El laboratorio</strong><small>Proyectos & experimentos</small></span><FiArrowUpRight /></Link>
+            <Link to="/learning"><span className={styles.linkIcon}><FiBookOpen /></span><span><strong>En aprendizaje</strong><small>Conceptos & pequeñas notas</small></span><FiArrowUpRight /></Link>
+            <Link to="/blog"><span className={styles.linkIcon}><FiFileText /></span><span><strong>El cuaderno</strong><small>Ideas & reflexiones</small></span><FiArrowUpRight /></Link>
+          </div>
+          <div className={styles.stack}><span>MI CAJA DE HERRAMIENTAS</span><p>React · Node <span>/</span> Next · Nest</p></div>
+        </aside>
       </section>
+      <div className={styles.bottomBar}>
+        <p className={styles.status}><span className={styles.smallDot} /> Actualmente trabajo tiempo completo como ingeniero de software. <span className={styles.availability}>No disponible</span></p>
+        <p className={styles.thinking} aria-hidden="true">{'>'} {thinkingPhrases[thinkingIndex]}<span className={styles.spinner} /></p>
+      </div>
     </main>
   );
 };

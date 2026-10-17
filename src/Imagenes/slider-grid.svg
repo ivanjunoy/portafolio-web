@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="196" viewBox="0 0 320 196">
+  <defs>
+    <linearGradient id="tile" x2="1" y2="1">
+      <stop stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+    <rect id="cell" width="64" height="32" rx="6" fill="url(#tile)"/>
+  </defs>
+  <rect width="320" height="196" fill="#f9f9f9"/>
+  <path d="M56 32H264" stroke="#dce0ef" stroke-width="6" stroke-linecap="round"/>
+  <path d="M56 32H144" stroke="#667eea" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="144" cy="32" r="9" fill="#764ba2"/>
+  <use href="#cell" x="56" y="60"/><use href="#cell" x="128" y="60"/><use href="#cell" x="200" y="60"/>
+  <use href="#cell" x="56" y="100"/><use href="#cell" x="128" y="100"/><use href="#cell" x="200" y="100"/>
+  <use href="#cell" x="56" y="140"/><use href="#cell" x="128" y="140"/><use href="#cell" x="200" y="140"/>
+  <g fill="white" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle">
+    <text x="88" y="81">1</text><text x="160" y="81">2</text><text x="232" y="81">3</text>
+    <text x="88" y="121">4</text><text x="160" y="121">5</text><text x="232" y="121">6</text>
+    <text x="88" y="161">7</text><text x="160" y="161">8</text><text x="232" y="161">9</text>
+  </g>
+</svg>

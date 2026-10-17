@@ -12,8 +12,10 @@ import NavigationHeader from './Components/NavigationHeader/NavigationHeader';
 
 import './App.css';
 import Closures from './Components/Learning/content/closures/Closures';
-import SliderGrid from './Components/Games/SliderGrid/SliderGrid';
+import SliderGrid from './Components/Project/SliderGrid/SliderGrid';
 import Snake from './Components/Games/Snake/Snake';
+import LoginLab from './Components/Project/LoginLab/LoginLab';
+import PortfolioLayout from './Components/PortfolioLayout/PortfolioLayout';
 
 function App() {
   return (
@@ -21,50 +23,29 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Navigate to='/welcome' replace />} />
-          <Route path='/welcome' element={<Welcome />} />
           <Route path='/resume' element={<MinimalResumeHome />} />
-          <Route path='/proyectos' element={
-            <>
-              <NavigationHeader />
-              <Project />
-            </>
-          } />
-          <Route path='/blog' element={
-            <>
-              <NavigationHeader />
-              <Blog />
-            </>
-          } />
-          <Route path='/dashboard' element={
-            <>
-              <NavigationHeader />
-              <Dashboard />
-            </>
-          } />
-          <Route path='/learning' element={
-            <>
-              <NavigationHeader />
-              <Learning />
-            </>
-          } />
+          <Route element={<PortfolioLayout />}>
+            <Route path='/welcome' element={<Welcome />} />
+            <Route path='/proyectos' element={<Project />} />
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/learning' element={<Learning />} />
+            <Route path='/games' element={<Games />} />
+          </Route>
           <Route path='/learning/closures' element={
             <>
               <NavigationHeader />
               <Closures />
             </>
           } />
-          <Route path='/games' element={
-            <>
-              <NavigationHeader />
-              <Games />
-            </>
-          } />
-          <Route path='/games/slider-grid' element={
+          <Route path='/games/slider-grid' element={<Navigate to='/proyectos/slider-grid' replace />} />
+          <Route path='/proyectos/slider-grid' element={
             <>
               <NavigationHeader />
               <SliderGrid />
             </>
           } />
+          <Route path='/proyectos/login' element={<LoginLab />} />
           <Route path='/games/snake' element={
             <>
               <NavigationHeader />

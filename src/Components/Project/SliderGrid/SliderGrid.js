@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from "./sliderGrid.module.css";
 
 const SliderGrid = () => {
@@ -25,6 +26,7 @@ const SliderGrid = () => {
 
     return (
         <div>
+            <h1>Cuadrícula deslizante</h1>
             <div className={styles['slider-info']}>
                 <p>Total de elementos: {sliderValue}</p>
             </div>
@@ -36,12 +38,15 @@ const SliderGrid = () => {
                     value={sliderValue}
                     className={styles['slider']}
                     id="myRange"
+                    aria-label="Cantidad de elementos"
                     onChange={handleSliderChange}
                 />
             </div>
             <div className={styles['grid-container']}>
                 {generateGrid()}
             </div>
+            <hr />
+            <Link to="/proyectos">Volver a proyectos</Link>
         </div>
     );
 }

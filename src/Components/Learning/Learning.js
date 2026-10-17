@@ -1,27 +1,26 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Lerning.module.css';
+import { FiArrowUpRight, FiCode, FiRepeat, FiBookOpen } from 'react-icons/fi';
+import { PageHeading } from '../PortfolioLayout/PortfolioLayout';
 
-const Learning = () => {
-    return (
-        <div className={styles.learningContainer}>
-            <div>
-                <h1>Aprendizaje</h1>
-                <hr />
-            </div>
-            <div className={styles.learningListContainer}>
-                <ul>
-                    <li>
-                        <Link to="/learning/closures" rel="noopener noreferrer">Cierres (Closures)</Link>
-                    </li>
-                    <li>
-                        <Link to="/learning/closures" rel="noopener noreferrer">Bucle de eventos (Event Loop)</Link>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    );
-};
-
-export default Learning;
-
+export default function Learning() {
+  return (
+    <main>
+      <PageHeading number="03" label="NOTAS DE APRENDIZAJE" title="Entender para" accent="construir." description="Conceptos, apuntes y pequeñas explicaciones. Un espacio para ordenar lo que aprendo en el camino." aside={<>Aprender, probar.<br />Volver a empezar.</>} />
+      <div className="portfolio-section-bar"><span>Conceptos para explorar</span><span>JavaScript / Fundamentos</span></div>
+      <div className="portfolio-tile-grid">
+        <Link to="/learning/closures" className="portfolio-tile portfolio-dark-tile">
+          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiCode /></span><span className="portfolio-tag">JAVASCRIPT</span></div>
+          <h2>Cierres (Closures)</h2>
+          <p>Funciones que recuerdan su entorno. Una mirada a los closures y cómo usarlos en JavaScript.</p>
+          <div className="portfolio-tile-bottom"><span>Explorar el concepto</span><FiArrowUpRight /></div>
+        </Link>
+        <article className="portfolio-tile">
+          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiRepeat /></span><span className="portfolio-tag">PRÓXIMAMENTE</span></div>
+          <h2>Bucle de eventos</h2>
+          <p>El orden detrás de lo asíncrono. Un próximo apunte sobre el Event Loop y la ejecución en JavaScript.</p>
+          <div className="portfolio-tile-bottom"><span>Un nuevo apunte en camino</span><FiBookOpen /></div>
+        </article>
+      </div>
+    </main>
+  );
+}

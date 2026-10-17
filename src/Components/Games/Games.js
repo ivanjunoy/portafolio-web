@@ -10,10 +10,10 @@ export default function Games() {
       <div className="portfolio-section-bar"><span>Elegí tu próxima partida</span><span>01 juego / Clásicos en código</span></div>
       <Link to="/games/snake" className={`portfolio-tile portfolio-dark-tile ${styles.snakeCard}`}>
         <div className={styles.snakeCopy}>
-          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiPlay /></span><span className="portfolio-tag">CLÁSICO</span></div>
+          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiPlay /></span><span className="portfolio-tag">EN DESARROLLO</span></div>
           <h2>Serpiente (Snake)</h2>
-          <p>El clásico de siempre, una línea de código a la vez. Movete, comé y tratá de no encontrarte con tu propia cola.</p>
-          <div className="portfolio-tile-bottom"><span>Jugar una partida</span><FiArrowUpRight /></div>
+          <p>El clásico de siempre, una línea de código a la vez. Por ahora, una vista previa del tablero. El juego llegará más adelante.</p>
+          <div className="portfolio-tile-bottom"><span>Ver el proyecto</span><FiArrowUpRight /></div>
         </div>
         <div className={styles.snakePreview} aria-hidden="true"><div className={styles.snakeBody} /><span className={styles.food} /><span className={styles.gameLabel}><FiCommand /> SNAKE / 01</span></div>
       </Link>

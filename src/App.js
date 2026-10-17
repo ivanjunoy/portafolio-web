@@ -37,15 +37,10 @@ function App() {
             <Route path='/learning/closures' element={<Closures />} />
             <Route path='/learning/event-loop' element={<EventLoop />} />
             <Route path='/games' element={<Games />} />
+            <Route path='/games/snake' element={<Snake />} />
           </Route>
           <Route path='/games/slider-grid' element={<Navigate to='/proyectos/slider-grid' replace />} />
           <Route path='/proyectos/login' element={<LoginLab />} />
-          <Route path='/games/snake' element={
-            <>
-              <NavigationHeader />
-              <Snake />
-            </>
-          } />
           <Route path='*' element={
             <>
               <NavigationHeader />

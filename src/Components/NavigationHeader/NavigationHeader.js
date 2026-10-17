@@ -9,7 +9,7 @@ const NavigationHeader = ({ appearance = 'default' }) => {
 
     const navItems = [
         { path: '/proyectos', label: 'Proyectos' },
-        { path: '/blog', label: 'Blog' },
+        { path: '/blog', label: 'Referencias' },
         { path: '/learning', label: 'Aprendizaje' },
         { path: '/games', label: 'Juegos' },
         { path: '/dashboard', label: 'Dashboard' }
@@ -22,6 +22,8 @@ const NavigationHeader = ({ appearance = 'default' }) => {
     const closeMenu = () => {
         setIsMenuOpen(false);
     };
+
+    const isActive = path => location.pathname === path || location.pathname.startsWith(`${path}/`);
 
     return (
         <nav className="navigation-header" aria-label="Navegación principal">
@@ -45,8 +47,8 @@ const NavigationHeader = ({ appearance = 'default' }) => {
                         <li key={item.path} className="nav-item">
                             <Link 
                                 to={item.path} 
-                                className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-                                aria-current={location.pathname === item.path ? 'page' : undefined}
+                                className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
+                                aria-current={isActive(item.path) ? (location.pathname === item.path ? 'page' : 'location') : undefined}
                                 onClick={closeMenu}
                             >
                                 {item.label}

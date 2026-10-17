@@ -1,9 +1,12 @@
+.page { padding-top: 32px; }
+.backLink { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 24px; font-size: 12px; text-decoration: none; }
+.backLink:hover { text-decoration: underline; }
 .container { background: var(--paper, #fafbf7); border: 1px solid var(--line, #d8dece); border-radius: 14px; padding: 48px clamp(24px, 7vw, 100px); }
 .containerPost { max-width: 760px; margin: auto; }
 .postMeta { display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #7c8b6b; font-size: 8px; letter-spacing: 1.2px; margin-bottom: 28px; }
 .postMeta time { color: #78856b; letter-spacing: .8px; }
-.containerPost h2 { font: italic 400 43px/1.2 Georgia, serif; letter-spacing: -1px; color: #667e45; margin: 0 0 30px; }
+.containerPost h1 { font: italic 400 43px/1.2 Georgia, serif; letter-spacing: -1px; color: #667e45; margin: 0 0 30px; }
 .lols { color: #58644f; font-size: 14px; line-height: 2; }
 .lols p { margin: 0 0 23px; }
 .lols p:last-child { margin-bottom: 0; }
-@media (max-width: 560px) { .container { padding: 29px 24px; } .postMeta { font-size: 7px; letter-spacing: .5px; } .containerPost h2 { font-size: 35px; } .lols { font-size: 13px; line-height: 1.9; } }
+@media (max-width: 560px) { .container { padding: 29px 24px; } .postMeta { font-size: 7px; letter-spacing: .5px; } .containerPost h1 { font-size: 35px; } .lols { font-size: 13px; line-height: 1.9; } }

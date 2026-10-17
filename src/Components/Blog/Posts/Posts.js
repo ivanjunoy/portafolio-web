@@ -1,5 +1,7 @@
 import { marked } from "marked"
 import { postsObj } from "./postObj"
+import { Link } from 'react-router-dom';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import styles from './Post.module.css';
 
@@ -28,7 +30,8 @@ const sanitizeHtml = (html) => {
 
 const Posts = () => {
     return (
-        <>
+        <main className={styles.page}>
+            <Link to="/blog" className={styles.backLink}><FiArrowLeft aria-hidden="true" /> Volver a referencias</Link>
             {
                 postsObj.map((post) => {
                     const markdownText = sanitizeHtml(marked(post.textPost));
@@ -36,14 +39,14 @@ const Posts = () => {
                         <article key={post.id} className={styles.container}>
                             <div className={styles.containerPost}>
                                     <div className={styles.postMeta}><span>REFLEXIONES / {String(post.id).padStart(2, '0')}</span><time dateTime="2024-04">ABRIL, 2024</time></div>
-                                    <h2>{post.title}</h2>
+                                    <h1>{post.title}</h1>
                                     <div className={styles.lols} dangerouslySetInnerHTML={{ __html: markdownText }}></div>
                             </div>
                         </article>
                     )
                 })
             }
-        </>
+        </main>
     )
 }
 

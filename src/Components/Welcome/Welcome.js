@@ -78,7 +78,7 @@ const Welcome = () => {
     <main className={styles.page}>
       <section className={styles.frame}>
         <div className={styles.introduction}>
-        <p className="portfolio-eyebrow"><span>00 /</span> CÓDIGO, CURIOSIDAD</p>
+        <p className="portfolio-eyebrow"><span>00 /</span> CÓDIGO - PROBLEMAS - SOLUCIONES</p>
         <h1 className={styles.title}>Hola, soy<br />Iván <em>Junoy.</em></h1>
         <p className={styles.subtitle}>
           Desarrollador de software enfocado en construir soluciones claras y confiables.
@@ -101,7 +101,7 @@ const Welcome = () => {
           <div className={styles.exploreLinks}>
             <Link to="/proyectos"><span className={styles.linkIcon}><FiCode /></span><span><strong>El laboratorio</strong><small>Proyectos & experimentos</small></span><FiArrowUpRight /></Link>
             <Link to="/learning"><span className={styles.linkIcon}><FiBookOpen /></span><span><strong>En aprendizaje</strong><small>Conceptos & pequeñas notas</small></span><FiArrowUpRight /></Link>
-            <Link to="/blog"><span className={styles.linkIcon}><FiFileText /></span><span><strong>El cuaderno</strong><small>Ideas & reflexiones</small></span><FiArrowUpRight /></Link>
+            <Link to="/blog"><span className={styles.linkIcon}><FiFileText /></span><span><strong>Referencias</strong><small>Enlaces & lecturas</small></span><FiArrowUpRight /></Link>
           </div>
           <div className={styles.stack}><span>MI CAJA DE HERRAMIENTAS</span><p>React · Node <span>/</span> Next · Nest</p></div>
         </aside>

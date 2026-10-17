@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
-import Prism from 'prismjs';
-import { Link } from 'react-router-dom';
-import 'prismjs/themes/prism-tomorrow.css';
-import 'prismjs/components/prism-javascript';
+import LearningArticle, { CodeExample, LessonNote, LessonSection } from '../../LearningArticle';
+
+const sections = [
+  { id: 'entorno', title: 'Una función con memoria' },
+  { id: 'sumadores', title: 'Cada cierre, su entorno' },
+  { id: 'usos', title: 'Un uso práctico' },
+];
 
 const codeExample1 = `function init() {
-  var name = "Mozilla"; 
+  const name = "Mozilla";
   function displayName() {
-    // displayName() 
-    console.log(name); 
+    console.log(name);
   }
   displayName();
 }
@@ -38,45 +39,27 @@ const size16 = makeSizer(16);
 `
 
 const Closures = () => {
-
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
-
   return (
-    <div>
-      <Link to="/learning">Go back</Link>
-      <h1>Closures</h1>
-
-      <p>Un closure (o clausura) es cuando una función “recuerda” las variables del lugar donde fue creada, incluso después de que esa función externa ya terminó de ejecutarse.</p>
-      <p>Sirven para crear funciones con “memoria” o con datos privados.</p>
-
-      <pre><code className="language-js">{codeExample1}</code></pre>
-      
-      <p>
-        Una variable local normal deja de existir cuando la función termina.
-        En cambio, si una función interna la usa, esa variable queda “viva” dentro del closure, incluso después de que la función externa haya finalizado.
-      </p>
-      <p>Aquí hay un ejemplo un poco más interesante: una función makeAdder:</p>
-      <pre><code className="language-js">{codeExample2}</code></pre>
-      <p>
-        makeAdder crea funciones que recuerdan el valor que se les pasó.
-        Cada una guarda su propio entorno: add5 recuerda que x = 5 y add10 que x = 10.
-        Por eso son closures: funciones que mantienen acceso a variables externas incluso después de que la función original terminó.
-      </p>
-
-      <h3>Closures Prácticos</h3>
-
-      <p>Otro ejemplo práctico: crear funciones para cambiar el tamaño de fuente:</p>
-      <pre><code className="language-js">{codeExample3}</code></pre>
-
-      <p>
-        Este ejemplo muestra cómo los closures pueden ser útiles para crear funciones
-        que "recuerdan" un valor específico. Cada función size12, size14, size16
-        recuerda su propio valor de size.
-      </p>
-
-    </div>
+    <LearningArticle number="01" title="Funciones con" accent="memoria." description="Cierres (Closures): funciones que mantienen acceso al entorno donde nacieron. Un concepto pequeño con muchos usos." sections={sections} related={{ to: '/learning/event-loop', label: 'Bucle de eventos (Event Loop)' }} sources={[{ label: 'MDN · Cierres (Closures)', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures' }]}>
+      <LessonSection id="entorno" number="01" title="Una función recuerda dónde nació">
+        <p>Un <strong>closure</strong> (o cierre) combina una función con referencias a su entorno léxico. La función mantiene acceso a esas variables, incluso si la función externa ya terminó de ejecutarse.</p>
+        <p>En este primer ejemplo, <code>displayName</code> puede leer <code>name</code> porque fue creada dentro de <code>init</code>.</p>
+        <CodeExample title="entorno-lexico.js" code={codeExample1} output="Mozilla" />
+        <LessonNote><p>El entorno depende de dónde se define la función. No de dónde se la llama después.</p></LessonNote>
+      </LessonSection>
+      <LessonSection id="sumadores" number="02" title="Un mismo código, dos entornos distintos">
+        <p>Ahora devolvemos la función interna y la usamos después. <code>makeAdder</code> crea sumadores que mantienen acceso a su propio valor de <code>x</code>.</p>
+        <CodeExample title="make-adder.js" code={codeExample2} output={'7\n12'} />
+        <p><code>add5</code> conserva el entorno donde <code>x = 5</code>, y <code>add10</code> el entorno donde <code>x = 10</code>. La llamada a <code>makeAdder</code> ya terminó, pero esas referencias siguen disponibles para las funciones retornadas.</p>
+        <LessonNote><p>Un closure conserva referencias a variables, no una copia congelada de sus valores. Si una variable compartida cambia, el cierre puede observar el cambio.</p></LessonNote>
+      </LessonSection>
+      <LessonSection id="usos" number="03" title="De la idea a un uso práctico">
+        <p>Podemos crear funciones que recuerden un tamaño de fuente y asociarlas a botones.</p>
+        <CodeExample title="make-sizer.js" code={codeExample3.trim()} />
+        <p>Las funciones <code>size12</code>, <code>size14</code> y <code>size16</code> conservan su propio <code>size</code>. Invocar <code>size14()</code> cambiaría el tamaño base de la fuente del documento a 14 píxeles.</p>
+        <p>Este patrón también sirve para preparar callbacks y mantener datos internos sin exponerlos como variables globales.</p>
+      </LessonSection>
+    </LearningArticle>
   );
 };
 

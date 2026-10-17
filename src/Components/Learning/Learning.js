@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiArrowUpRight, FiCode, FiRepeat, FiBookOpen } from 'react-icons/fi';
+import { FiArrowUpRight, FiCode, FiRepeat } from 'react-icons/fi';
 import { PageHeading } from '../PortfolioLayout/PortfolioLayout';
 
 export default function Learning() {
@@ -14,12 +14,12 @@ export default function Learning() {
           <p>Funciones que recuerdan su entorno. Una mirada a los closures y cómo usarlos en JavaScript.</p>
           <div className="portfolio-tile-bottom"><span>Explorar el concepto</span><FiArrowUpRight /></div>
         </Link>
-        <article className="portfolio-tile">
-          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiRepeat /></span><span className="portfolio-tag">PRÓXIMAMENTE</span></div>
+        <Link to="/learning/event-loop" className="portfolio-tile">
+          <div className="portfolio-tile-top"><span className="portfolio-tile-icon"><FiRepeat /></span><span className="portfolio-tag">JAVASCRIPT</span></div>
           <h2>Bucle de eventos</h2>
-          <p>El orden detrás de lo asíncrono. Un próximo apunte sobre el Event Loop y la ejecución en JavaScript.</p>
-          <div className="portfolio-tile-bottom"><span>Un nuevo apunte en camino</span><FiBookOpen /></div>
-        </article>
+          <p>El orden detrás de lo asíncrono. Explorá la pila de ejecución, las tareas y las microtareas en el navegador.</p>
+          <div className="portfolio-tile-bottom"><span>Explorar el concepto</span><FiArrowUpRight /></div>
+        </Link>
       </div>
     </main>
   );

@@ -11,7 +11,7 @@
 }
 
 .profileButon:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    box-shadow: 0 0 11px color-mix(in srgb, var(--primary02) 20%, transparent);
 }
 
 .profilePicture {

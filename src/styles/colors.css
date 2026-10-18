@@ -1,0 +1,35 @@
+/*
+ * Paleta compartida: 20 colores base para toda la interfaz.
+ * Importada una sola vez en src/index.js; disponible en CSS, React y SVG inline.
+ * Sombras y hover se derivan de estos colores con color-mix().
+ * Reutilizar esta paleta antes de incorporar un nuevo tono.
+ */
+:root {
+  /* Identidad: bosque, tinta, oliva, lima, texto inverso y borde oscuro. */
+  --primary01: #192d25;
+  --primary02: #243a30;
+  --primary03: #778b50;
+  --primary04: #cde99b;
+  --primary05: #b5c2ab;
+  --primary06: #3d5037;
+
+  /* Neutros: blanco, lienzo, papel, texto secundario, borde e interior oscuro. */
+  --neutral01: #ffffff;
+  --neutral02: #eeefe9;
+  --neutral03: #fafbf7;
+  --neutral04: #697660;
+  --neutral05: #d8dece;
+  --neutral06: #14251e;
+
+  /* Estados: fondo (01) y texto (02). */
+  --error01: #faeae3;
+  --error02: #954125;
+  --success01: #eaf2dd;
+  --success02: #48642d;
+
+  /* Acentos funcionales: ambar, azul, turquesa del CV y sintaxis violeta. */
+  --warning01: #dfba87;
+  --info01: #3498db;
+  --secondary01: #0f766e;
+  --syntax01: #d2b9ce;
+}

@@ -1,8 +1,8 @@
 .snakeCard { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding: 37px; }
 .snakeCopy { max-width: 420px; }
-.snakePreview { position: relative; min-height: 245px; border: 1px solid #42553b; border-radius: 9px; overflow: hidden; background-color: #14251e; background-image: linear-gradient(#33492c55 1px, transparent 1px), linear-gradient(90deg, #33492c55 1px, transparent 1px); background-size: 25px 25px; }
-.snakeBody { position: absolute; width: 100px; height: 75px; border-left: 22px solid #cde99b; border-bottom: 22px solid #cde99b; top: 29%; left: 30%; border-radius: 3px; }
-.snakeBody::after { content: ''; position: absolute; bottom: -22px; right: -23px; width: 22px; height: 47px; background: #cde99b; border-radius: 3px; }
-.food { position: absolute; width: 13px; height: 13px; background: #d5a374; border-radius: 4px; top: 28%; right: 23%; }
-.gameLabel { position: absolute; bottom: 18px; left: 20px; display: flex; align-items: center; gap: 8px; font: 9px monospace; letter-spacing: 1px; color: #9caf8d; }
+.snakePreview { position: relative; min-height: 245px; border: 1px solid var(--primary06); border-radius: 9px; overflow: hidden; background-color: var(--neutral06); background-image: linear-gradient(color-mix(in srgb, var(--primary06) 33.33%, transparent) 1px, transparent 1px), linear-gradient(90deg, color-mix(in srgb, var(--primary06) 33.33%, transparent) 1px, transparent 1px); background-size: 25px 25px; }
+.snakeBody { position: absolute; width: 100px; height: 75px; border-left: 22px solid var(--primary04); border-bottom: 22px solid var(--primary04); top: 29%; left: 30%; border-radius: 3px; }
+.snakeBody::after { content: ''; position: absolute; bottom: -22px; right: -23px; width: 22px; height: 47px; background: var(--primary04); border-radius: 3px; }
+.food { position: absolute; width: 13px; height: 13px; background: var(--warning01); border-radius: 4px; top: 28%; right: 23%; }
+.gameLabel { position: absolute; bottom: 18px; left: 20px; display: flex; align-items: center; gap: 8px; font: 9px monospace; letter-spacing: 1px; color: var(--primary05); }
 @media (max-width: 680px) { .snakeCard { grid-template-columns: 1fr; gap: 28px; padding: 25px; } .snakePreview { min-height: 210px; } }

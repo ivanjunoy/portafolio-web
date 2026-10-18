@@ -2,13 +2,7 @@ import { Link } from 'react-router-dom';
 import { FiArrowLeft, FiArrowUp, FiArrowDown, FiArrowRight, FiClock, FiGrid, FiCommand } from 'react-icons/fi';
 import { PageHeading } from '../../PortfolioLayout/PortfolioLayout';
 import styles from './snake.module.css';
-
-const COLUMNS = 20;
-const ROWS = 10;
-// Ilustración estática: el movimiento y las reglas se implementarán más adelante.
-const PREVIEW_SNAKE = new Set([83, 84, 85, 105, 125, 126, 127]);
-const HEAD = 127;
-const FOOD = 73;
+import SnakeGame from './SnakeGame';
 
 export default function Snake() {
   return (
@@ -39,12 +33,8 @@ export default function Snake() {
           <div className={styles.boardHeader}><h2 id="snake-board-title"><FiGrid /> El tablero</h2><span>VISTA PREVIA</span></div>
           <div className={styles.boardMeta}><span>20 × 10 <small>CUADRÍCULA</small></span><span>200 <small>CELDAS</small></span><span className={styles.staticBadge}><i /> Sin iniciar</span></div>
           <figure className={styles.preview}>
-            <div className={styles.board} role="img" aria-label="Vista previa estática de Snake: tablero de 20 columnas y 10 filas con una serpiente ilustrativa. No es un juego interactivo.">
-              {Array.from({ length: COLUMNS * ROWS }, (_, index) => (
-                <div key={index} aria-hidden="true" className={`${styles.cell} ${PREVIEW_SNAKE.has(index) ? styles.snake : ''} ${index === HEAD ? styles.head : ''} ${index === FOOD ? styles.food : ''}`}>
-                  {!PREVIEW_SNAKE.has(index) && index !== FOOD && <span>{index}</span>}
-                </div>
-              ))}
+            <div className={styles.board} role="region" aria-label="Espacio para el juego Snake">
+              <SnakeGame />
             </div>
             <figcaption><span><i /> Vista previa estática</span><span>El juego está en desarrollo</span></figcaption>
           </figure>

@@ -1,4 +1,4 @@
-.portfolio-dashboard-number { color: #81916e; font: 11px monospace; }
+.portfolio-dashboard-number { color: var(--primary03); font: 11px monospace; }
 .portfolio-dashboard .portfolio-tile { padding: 28px; }
 .portfolio-dashboard .portfolio-tile-top { margin-bottom: 22px; }
 .portfolio-dashboard .portfolio-tile h2 { font-size: 21px; }
